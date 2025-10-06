@@ -14,18 +14,11 @@ ax2 = fig.add_subplot(1, 2, 2, projection='3d')
 
 def makePlot(function):
     Z = function
-    # make window wide enough to fit multiple graphs
-    # fig = plt.figure(figsize=plt.figaspect(0.5))
 
-    # first plot
-    # ax1 = fig.add_subplot(1, 2, 1, projection='3d')
+    # Plot the surfaces
     ax1.plot_surface(X, Y, Z, vmin=Z.min() * 2)
-
-    # second subplot
-    # ax2 = fig.add_subplot(1, 2, 2, projection='3d')
     ax2.contourf(X,Y,Z,20,alpha=0.35)
 
-    # ax.plot([xlim], [ylim], [limval], markerfacecolor='k', markeredgecolor='k', marker='o', markersize=5, alpha=0.6)
 
     ax1.set_xlabel("X axis")
     ax1.set_ylabel("Y axis")
@@ -70,18 +63,10 @@ def gradientDescent(x1, y1, color):
         xk = xk1
         
 
-    
-
-
-
-
-
-
-
 
 def f(X,Y):
     return (X**2 + Y - 11)**2 + (X + Y**2 - 7)**2
 
-# gradientDescent(0,0)
+
 makePlot(f(X,Y))
 

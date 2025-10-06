@@ -29,7 +29,6 @@ def makePlot(function, xlim, ylim, limval):
 
     # first plot
     ax = fig.add_subplot(1, 2, 1, projection='3d')
-    # fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
     ax.plot_surface(X, Y, Z, vmin=Z.min() * 2)
 
     # second subplot
