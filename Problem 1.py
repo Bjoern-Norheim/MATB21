@@ -13,6 +13,12 @@ X, Y = np.meshgrid(X, Y)
 def f(X,Y):
     return (X**2 - X*Y)/(X**2 - Y**2)
 
+def g(X,Y):
+    return (X**2 + Y**2)/(X**2 + X*Y + Y**2)
+
+def h(X,Y):
+    return (np.sin(X + X*Y) - X - X*Y)/(X**3 * (Y+1)**3)
+
 
 
 # Limit 1.1
@@ -40,7 +46,6 @@ def makePlot(function, xlim, ylim, limval):
 
 makePlot(f(X,Y),1,1,0.5)
 input("Press enter to continue")
-
-
-
-
+makePlot(g(X,Y), 0, 0, 0)
+input("Press enter to continue")
+makePlot(h(X,Y), 0,-1, -1/6)
