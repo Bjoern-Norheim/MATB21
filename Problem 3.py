@@ -35,3 +35,7 @@ def makePlot(function):
 
 
 makePlot(f(X,Y,Z))
+
+# git add .
+# git commit -m "Your message here"
+# git push 
