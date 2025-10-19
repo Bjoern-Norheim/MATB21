@@ -41,8 +41,14 @@ def gradientDescent(x1, y1, color):
     # Evaluate the function at the various x,y values
     F = (X**2 + Y - 11)**2 + (X + Y**2 - 7)**2
 
-    # Compute an array of gradient values
-    dF_dy, dF_dx = np.gradient(F, y, x)
+    
+    # Step size for finite differences
+    h = 1e-3
+
+    # Compute and arry of gradient values
+    # Gradient equations taken from problem 2
+    dF_dx = (f(X + h, Y) - f(X, Y)) / h
+    dF_dy = (f(X, Y + h) - f(X, Y)) / h 
     
     
 
