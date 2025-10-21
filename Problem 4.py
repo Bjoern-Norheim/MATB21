@@ -53,7 +53,7 @@ def gradientDescent(x1, y1, color):
     
 
     for i in range(0,20):
-        # Finds the (x,y) point on the function curve which is closest to your current position after the step
+        # Finds the (x,y) point on the function grid which is closest to your current continusou position after the step
         ix = np.argmin(np.abs(x - xk[0]))
         iy = np.argmin(np.abs(y - xk[1]))
 
