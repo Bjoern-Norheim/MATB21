@@ -53,19 +53,16 @@ def gradientDescent(x1, y1, color):
     
 
     for i in range(0,20):
-        # Evaluate the gradient at a specific point by finding the indexs for the desired x,y values
+        # Finds the (x,y) point on the function curve which is closest to your current position after the step
         ix = np.argmin(np.abs(x - xk[0]))
         iy = np.argmin(np.abs(y - xk[1]))
 
         # plot current step
-
         ax2.plot([xk[0]], [xk[1]], [f(xk[0], xk[1])], markerfacecolor=color, markeredgecolor='k', marker='o', markersize=5, alpha=0.6)
         
-        # take a step
+        # calculate gradient value and apply gradient descent algorithm
         grad = np.array([dF_dx[iy, ix], dF_dy[iy, ix]])
-
         xk1 = xk - a * grad
-        
         xk = xk1
         
 
